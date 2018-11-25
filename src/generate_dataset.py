@@ -183,7 +183,7 @@ def generate_features(df, freq='15S'):
     return agg_df
 
 
-def add_labels(df, label_df):
+def add_labels(df, label_df, prediction_shift=15):
     df['status'] = 'unk'
     df = df.reset_index()
     min_t = df.timestamp.min()
@@ -191,6 +191,8 @@ def add_labels(df, label_df):
     for i, row in label_df.iterrows():
         df.loc[(df['timestamp'] >= row['start']) &
                (df['timestamp'] <= row['stop']), 'status'] = row['status']
+    df['status'] = df['status'].shift(prediction_shift)
+    df.fillna(0, inplace=True)
     return df
 
 
