@@ -1,0 +1,7 @@
+{% extends "mainApp/wrapper.html" %} <!-- connect file, in this case we connect background and meta properties, can be used once -->
+
+{% block content %}
+ <h2 class="text-info">{{articles.title}}</h2>
+ <h6 class="text-info">Published: {{articles.date|date:"Y-m-d, H:i:s"}}</h6>
+ <p>{{articles.post|safe|linebreaks}}</p>	
+{% endblock %}

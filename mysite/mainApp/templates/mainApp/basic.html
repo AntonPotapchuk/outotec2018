@@ -1,0 +1,7 @@
+{% extends "mainApp/wrapper.html" %} <!-- connect file, in this case we connect background and meta properties, can be used once -->
+
+{% block content %}
+ {% for val in values %}
+ 	<p>{{val}}</p>
+ {% endfor %}
+{% endblock %}

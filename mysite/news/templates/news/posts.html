@@ -1,0 +1,8 @@
+{% extends "mainApp/wrapper.html" %} <!-- connect file, in this case we connect background and meta properties, can be used once -->
+
+{% block content %}
+ {% for post in object_list %}
+ 	<a href="news/{{post.id}}"><h3>{{post.title}}</h3></a>
+ 	<h5>{{post.date|date:"d-m-Y"}}</h5>   <!-- | > add filters-->
+ {% endfor %}
+{% endblock %}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="refresh" content="30"> 
+	<title>DATAWIZ task</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/EXTRA_CSS.css' %}">
+	
+</head>
+<body font-family="roboto">
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col" id="title">
+				<h1 class="display-1">OUTOTEC task.<br> Project "I hear voices"</h1>
+			</div>
+		</div>
+		<div class="container row">
+			<div class='plot_container'>
+		      <!-- <h1>{% include "mainApp/includes/some_html.html" %}</h1> 
+		      {% block content %}
+		      {% endblock %} -->
+		      <h3 class="font-weight-bold">Motion plot: ACC_PEPA</h3>
+		      <p><b>How to use it:</b> <li>Press <i><b>house</b></i>, to show general view.</li> <li>Press <i><b>crossed arrows</b></i> to move into the plot</li> <li>Press <i><b>zoom ico</b></i> for zooming in-out some parts of the plot</li> </p>
+		      <!-- <iframe id="serviceFrameSend"  src="templates/mainApp/includes/temp.html" width="100%" height="100%"  frameborder="0"> -->
+		      {% include "mainApp/includes/acc_pepa.html" %}
+
+		      <h3 class="font-weight-bold">Motion plot: PEPA</h3>
+		      <p><b>How to use it:</b> <li>Press <i><b>house</b></i>, to show general view.</li> <li>Press <i><b>crossed arrows</b></i> to move into the plot</li> <li>Press <i><b>zoom ico</b></i> for zooming in-out some parts of the plot</li> </p>
+		      {% include "mainApp/includes/pepa.html" %}
+
+		      <h3 class="font-weight-bold">Motion plot: ACC_SALT</h3>
+		      <p><b>How to use it:</b> <li>Press <i><b>house</b></i>, to show general view.</li> <li>Press <i><b>crossed arrows</b></i> to move into the plot</li> <li>Press <i><b>zoom ico</b></i> for zooming in-out some parts of the plot</li> </p>
+		      {% include "mainApp/includes/acc_salt.html" %}
+
+		      <h3 class="font-weight-bold">Motion plot: SALT</h3>
+		      <p><b>How to use it:</b> <li>Press <i><b>house</b></i>, to show general view.</li> <li>Press <i><b>crossed arrows</b></i> to move into the plot</li> <li>Press <i><b>zoom ico</b></i> for zooming in-out some parts of the plot</li> </p>
+		      {% include "mainApp/includes/salt.html" %}
+
+		      <h3 class="font-weight-bold">Prediction plot: </h3>
+		      <p><b>How to use it:</b> <li>Press <i><b>house</b></i>, to show general view.</li> <li>Press <i><b>crossed arrows</b></i> to move into the plot</li> <li>Press <i><b>zoom ico</b></i> for zooming in-out some parts of the plot</li> </p>
+		      {% include "mainApp/includes/prediction.html" %}
+
+
+		      <p id="vidtsup"></p>	
+		      
+		    </div>
+	        <div class="row" id="buttons">
+		        	<div>
+		        		<blockquote><p class="quotation" id="q"> 
+						  Datasets we are working with are fabric noise and motion data, the total size is 60 GB.  We explore both sources of data to be able to predict fabric failure, based on current data from equipment.  <b>	The main challenge</b> is to find any kind of correlation between the data and event type (the process is stopped, the process is running, the failure). We will use different preprocessing techniques as well as statistical and machine learning methods to explore possible dependencies.</p>
+						</blockquote> 
+		        	</div>
+		        	<div  id="buttons">
+					    <!-- <a href="/demo" class="btn btn-dark btn-lg">DEMO </a> -->
+				        <p onclick="myFunction()" class="btn btn-dark btn-lg">POLICE </p>
+				        
+						<script>
+						function myFunction() {
+						    alert("THE POLICE ON YOUR WAY!!!");
+						}
+						</script>
+				         <!-- <a href="/news" class="btn btn-primary btn-lg">News &raquo;</a> -->
+				        <!-- <a href="/admin" class="btn btn-lg btn-lg">Admin &raquo;</a>  -->
+				        <!-- <a href="/contact" class="btn btn-info btn-lg">Contacts </a> -->
+				        <a href="/" class="btn btn-success btn-lg">Main page</a>
+				    </div>
+      		</div>
+      	</div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- <img src="{% static 'mainApp/image/me.jpg' %}" class="img-thumbnail" height=480 width=270> -->
+    <hr>
+    &copy; All rights reserved 2018 <br>
+    Viacheslav Komisarenko, Viktor Mysko, Olha Kaminska, Anton Potapchuk <br>
+    Special for <a href="https://hackjunction.com/"> <img src="{% static 'mainApp/image/ZrifrOS.png' %}" class="img-thumbnail" height=720 width=192 alt="https://hackjunction.com/"></a>
+  </div>
+</body>
+</html>

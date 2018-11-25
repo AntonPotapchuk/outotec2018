@@ -1,0 +1,88 @@
+blockquote{
+  font-size: 30px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+blockquote:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+
+p{
+  margin: 0;
+}
+
+footer{
+  margin:0;
+  text-align: right;
+  font-size: 1em;
+  font-style: italic;
+}
+
+/* Callout box - fixed position at the bottom of the page */
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+/* Callout header */
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+/* Callout container/body */
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black
+}
+
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change color on mouse-over */
+.closebtn:hover {
+  color: lightgrey;
+}
+
+#title, #vidstup {
+  padding-bottom: 40px;
+}
+
+.plot_container {
+  width: 100%;
+}
+
+.plot_container div {
+  text-align: center;
+}
+
+#q {
+  text-align: justify;
+}
